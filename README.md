@@ -88,7 +88,7 @@ Detailed metrics and confusion matrix are included in the results report.
 ## 7. Artifacts & Links
 - **Dataset (ZIP):**          https://drive.google.com/file/d/1rKBNC0_io1GDt13ZFa_7NrU0mjTz_nqb/view?usp=drive_link
 - **ONNX model:**             https://drive.google.com/file/d/1vty0m3iSvfD-WojL4oeF3BHl7dksipGW/view?usp=drive_link
-- **Results report (PDF):** <ADD LINK>
+- **Results report (PDF):**   https://drive.google.com/file/d/1lmjOsXPIKb-9GJZJgcg9ZmTIKHiMFrud/view?usp=drive_link
 
 ---
 
