@@ -1,0 +1,148 @@
+PS C:\Users\vsgau\OneDrive\Documents\Coding Files> & C:/Users/vsgau/.conda/envs/wafer_ai/python.exe "c:/Users/vsgau/OneDrive/Documents/Coding Files/Edge-AI_Wafer_System/train_phase1_multiclass.py"
+All images are resized to 224x224 during training via transforms.Resize
+Traceback (most recent call last):
+  File "c:\Users\vsgau\OneDrive\Documents\Coding Files\Edge-AI_Wafer_System\train_phase1_multiclass.py", line 33, in <module>
+    train_dataset = datasets.ImageFolder(
+  File "C:\Users\vsgau\.conda\envs\wafer_ai\lib\site-packages\torchvision\datasets\folder.py", line 328, in __init__
+    super().__init__(
+  File "C:\Users\vsgau\.conda\envs\wafer_ai\lib\site-packages\torchvision\datasets\folder.py", line 149, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+  File "C:\Users\vsgau\.conda\envs\wafer_ai\lib\site-packages\torchvision\datasets\folder.py", line 234, in find_classes
+    return find_classes(directory)
+  File "C:\Users\vsgau\.conda\envs\wafer_ai\lib\site-packages\torchvision\datasets\folder.py", line 41, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'dataset/train'
+PS C:\Users\vsgau\OneDrive\Documents\Coding Files> cd .\Edge-AI_Wafer_System\
+PS C:\Users\vsgau\OneDrive\Documents\Coding Files\Edge-AI_Wafer_System> & C:/Users/vsgau/.conda/envs/wafer_ai/python.exe "c:/Users/vsgau/OneDrive/Documents/Coding Files/Edge-AI_Wafer_System/train_phase1_multiclass.py"
+All images are resized to 224x224 during training via transforms.Resize
+Class mapping: {'bridges': 0, 'clean': 1, 'cmp_scratches': 2, 'cracks': 3, 'ler': 4, 'open': 5, 'others': 6, 'particles': 7, 'residues': 8, 'via': 9}
+C:\Users\vsgau\.conda\envs\wafer_ai\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\vsgau\.conda\envs\wafer_ai\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Epoch [1/20] - Loss: 0.7944 - Val Acc: 58.49%
+Epoch [2/20] - Loss: 0.4739 - Val Acc: 81.13%
+Epoch [3/20] - Loss: 0.4594 - Val Acc: 80.38%
+Epoch [4/20] - Loss: 0.4199 - Val Acc: 89.06%
+Epoch [5/20] - Loss: 0.3780 - Val Acc: 87.92%
+Epoch [6/20] - Loss: 0.3904 - Val Acc: 93.21%
+Epoch [7/20] - Loss: 0.3444 - Val Acc: 95.47%
+Epoch [8/20] - Loss: 0.3420 - Val Acc: 92.08%
+Epoch [9/20] - Loss: 0.3440 - Val Acc: 91.70%
+Epoch [10/20] - Loss: 0.3324 - Val Acc: 91.32%
+Epoch [11/20] - Loss: 0.3499 - Val Acc: 92.45%
+Epoch [12/20] - Loss: 0.3501 - Val Acc: 88.30%
+Epoch [13/20] - Loss: 0.3610 - Val Acc: 88.68%
+Epoch [14/20] - Loss: 0.3219 - Val Acc: 92.83%
+Epoch [15/20] - Loss: 0.3246 - Val Acc: 91.32%
+Epoch [16/20] - Loss: 0.3189 - Val Acc: 91.32%
+Epoch [17/20] - Loss: 0.3231 - Val Acc: 90.57%
+Epoch [18/20] - Loss: 0.3267 - Val Acc: 91.32%
+Epoch [19/20] - Loss: 0.3230 - Val Acc: 88.68%
+Epoch [20/20] - Loss: 0.3239 - Val Acc: 87.55%
+Model saved as phase1_multiclass_model.pth
+
+Confusion Matrix:
+[[  7   0   0   0   1   0   0   0   0   0]
+ [  0   4   0   0   1   0   2   0   0   0]
+ [  0   0  20   3   3   0   0   0   0   0]
+ [  0   0   1  18   0   0   0   0   0   0]
+ [ 15   2   0   0  14   0   0   0   0   0]
+ [  1   1   0   0   1   4   0   0   2   0]
+ [  0   0  14   0   0   0 126   0   0   0]
+ [  0   0   0   0   0   0   0   7   1   0]
+ [  0   0   0   0   0   1   0   0   5   0]
+ [  0   0   0   0   0   0   0   0   0  11]]
+
+Classification Report:
+               precision    recall  f1-score   support
+
+      bridges       0.30      0.88      0.45         8
+        clean       0.57      0.57      0.57         7
+cmp_scratches       0.57      0.77      0.66        26
+       cracks       0.86      0.95      0.90        19
+          ler       0.70      0.45      0.55        31
+         open       0.80      0.44      0.57         9
+       others       0.98      0.90      0.94       140
+    particles       1.00      0.88      0.93         8
+     residues       0.62      0.83      0.71         6
+          via       1.00      1.00      1.00        11
+
+     accuracy                           0.82       265
+    macro avg       0.74      0.77      0.73       265
+ weighted avg       0.86      0.82      0.82       265
+
+PS C:\Users\vsgau\OneDrive\Documents\Coding Files\Edge-AI_Wafer_System> & C:/Users/vsgau/.conda/envs/wafer_ai/python.exe "c:/Users/vsgau/OneDrive/Documents/Coding Files/Edge-AI_Wafer_System/model_audit.py"
+
+=== DATASET CHECK ===
+Classes: ['bridges', 'clean', 'cmp_scratches', 'cracks', 'ler', 'open', 'others', 'particles', 'residues', 'via']
+Test samples: 265
+Class distribution: Counter({6: 140, 4: 31, 2: 26, 3: 19, 9: 11, 5: 9, 0: 8, 7: 8, 1: 7, 8: 6})
+C:\Users\vsgau\.conda\envs\wafer_ai\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\vsgau\.conda\envs\wafer_ai\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+c:\Users\vsgau\OneDrive\Documents\Coding Files\Edge-AI_Wafer_System\model_audit.py:37: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(MODEL_PATH, map_location=DEVICE))
+
+=== MODEL CHECK ===
+Model loaded successfully
+Total parameters: 11181642
+Trainable parameters: 11181642
+
+=== OUTPUT SANITY CHECK ===
+Probabilities range: 9.608951e-07 to 0.9951074
+Mean confidence: 0.66475517
+
+=== CLASS COVERAGE ===
+True class counts:
+bridges        : 8
+clean          : 7
+cmp_scratches  : 26
+cracks         : 19
+ler            : 31
+open           : 9
+others         : 140
+particles      : 8
+residues       : 6
+via            : 11
+
+Predicted class counts:
+bridges        : 23
+clean          : 7
+cmp_scratches  : 35
+cracks         : 21
+ler            : 20
+open           : 5
+others         : 128
+particles      : 7
+residues       : 8
+via            : 11
+
+=== CONFIDENCE RISK ANALYSIS ===
+High confidence predictions (>95%): 39
+Low confidence predictions (<40%): 28
+
+=== AUDIT COMPLETE ===
+PS C:\Users\vsgau\OneDrive\Documents\Coding Files\Edge-AI_Wafer_System> & C:/Users/vsgau/.conda/envs/wafer_ai/python.exe "c:/Users/vsgau/OneDrive/Documents/Coding Files/Edge-AI_Wafer_System/dataset_stats.py"
+
+=== DATASET SUMMARY ===
+Total images in dataset: 2006
+
+Images per split:
+  train: 1476
+  val: 265
+  test: 265
+
+Images per class (across all splits):
+  bridges: 61
+  clean: 39
+  cmp_scratches: 162
+  cracks: 113
+  ler: 177
+  open: 44
+  others: 1189
+  particles: 101
+  residues: 40
+  via: 80
+PS C:\Users\vsgau\OneDrive\Documents\Coding Files\Edge-AI_Wafer_System>
