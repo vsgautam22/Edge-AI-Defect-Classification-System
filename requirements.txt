@@ -1,0 +1,9 @@
+Requirements
+
+torch
+torchvision
+numpy
+scikit-learn
+matplotlib
+pillow
+onnx
