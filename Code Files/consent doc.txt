@@ -1,0 +1,26 @@
+Code Files – Context and Usage Notice
+
+This folder contains the core source code used in the development of the
+Edge-AI Wafer Defect Classification System.
+
+Contents include:
+- Model training scripts (PyTorch-based)
+- Dataset analysis and statistics utilities
+- Model evaluation and audit scripts
+- ONNX export script for edge deployment
+
+All code in this directory:
+- Was authored by the project team during this competition
+- Represents the actual implementation used to generate reported results
+- Is provided for transparency, reproducibility, and technical evaluation
+
+The code is intended for:
+- Academic review
+- Hackathon evaluation
+- Non-commercial research and learning purposes
+
+Datasets referenced by the code are not included in this repository due to
+size constraints and usage considerations. Dataset access is provided
+separately via external links in the main README.
+
+© Team ChipCrafters – Edge-AI Wafer Defect Classification System
