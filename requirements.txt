@@ -1,9 +1,10 @@
 Requirements
 
-torch
-torchvision
-numpy
-scikit-learn
-matplotlib
-pillow
-onnx
+torch==2.5.1
+torchvision==0.20.1
+numpy==2.0.2
+scikit-learn==1.8.0
+matplotlib==3.10.8
+pillow==12.1.0
+onnx==1.19.1
+
