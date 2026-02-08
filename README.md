@@ -8,60 +8,35 @@ Edge-deployable deep learning system for semiconductor wafer defect classificati
 ## Overview
 This repository contains the dataset structure, trained model artifacts, evaluation results, and inference code for an Edge-AI wafer defect classification system.
 
-Problem Statement
+# Dataset Summary
+> Attribute	Value
+> Total images	2006
+> Classes	10
+> Clean vs Defective	Included
+> Labeling	Manual + audited
+> Split	Train / Val / Test (frozen)
 
-Manual wafer inspection is slow, inconsistent, and non-scalable
+# Model Architecture
+> Backbone: ResNet-18
+> Training: Class-weighted cross-entropy
+> Export: ONNX (opset stable)
+> Inference-ready for edge deployment
 
-Dataset Summary
-Attribute	Value
-Total images	2006
-Classes	10
-Clean vs Defective	Included
-Labeling	Manual + audited
-Split	Train / Val / Test (frozen)
-Model Architecture
+#Performance Metrics
+> Accuracy: ~86%
+> Weighted F1-score: ~0.86
+> Confusion matrix included
+> Class imbalance explicitly handled
+> Edge Readiness
+> Model size optimized
+> ONNX-compatible
+> No post-training required
 
-Backbone: ResNet-18
+# Repository Contents
+> Brief explanation of each top-level folder.
 
-Training: Class-weighted cross-entropy
+# How to Run Inference
+> python inference/onnx_inference.py --image sample.png
 
-Export: ONNX (opset stable)
-
-Inference-ready for edge deployment
-
-Performance Metrics
-
-Accuracy: ~86%
-
-Weighted F1-score: ~0.86
-
-Confusion matrix included
-
-Class imbalance explicitly handled
-
-Edge Readiness
-
-Model size optimized
-
-ONNX-compatible
-
-No post-training required
-
-Repository Contents
-
-Brief explanation of each top-level folder.
-
-How to Run Inference
-python inference/onnx_inference.py --image sample.png
-
-Limitations
-
-Optical-only images
-
-Minority defect classes constrained by data volume
-
-Domain shift possible across fabs
-
-License
-
-Specify (MIT / Apache 2.0 preferred)
+# License
+> MIT
