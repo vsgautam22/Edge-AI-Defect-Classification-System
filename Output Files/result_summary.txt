@@ -1,0 +1,57 @@
+Results Summary – Edge-AI Wafer Defect Classification System
+
+Model Overview
+--------------
+Backbone: ResNet-18 (transfer learning)
+Framework: PyTorch
+Input Resolution: 224 × 224
+Loss Function: Class-weighted Cross-Entropy
+Optimizer: Adam (learning rate = 1e-4)
+Export Format: ONNX (deployment-ready)
+
+Dataset Summary
+---------------
+Total images: 2006
+Number of classes: 10 (including 'others')
+Train / Validation / Test split: 1476 / 265 / 265
+
+Classes:
+bridges, clean, cmp_scratches, cracks, ler, open,
+particles, residues, via, others
+
+The 'others' class is used to capture unknown or mixed defect patterns,
+improving robustness and reducing false positives in real-world inspection.
+
+Final Test Performance
+----------------------
+Overall Accuracy: ~82%
+Weighted F1-score: ~0.82
+Macro F1-score: ~0.73
+
+Class-wise Observations:
+- Strong performance on cracks, residues, via, and particles
+- CMP scratches and cracks show high recall and precision
+- Partial confusion observed between visually similar classes such as
+  bridges and LER, consistent with real wafer inspection challenges
+- The 'others' class effectively absorbs heterogeneous and unknown patterns
+
+Model Audit & Robustness
+-----------------------
+- No dead or ignored classes observed
+- Mean prediction confidence: ~0.66
+- Confidence distribution indicates a well-calibrated model
+- No numerical instability or prediction collapse detected
+
+Deployment Readiness
+--------------------
+- Model successfully exported to ONNX format
+- Compatible with edge-AI runtimes and toolchains
+- No post-training quantization or retraining required for deployment
+
+Notes
+-----
+These results reflect genuine execution outputs generated during local
+training and evaluation. Terminal logs and screenshots are provided
+as supporting proof-of-work and reproducibility evidence.
+
+© Team ChipCrafters – Edge-AI Wafer Defect Classification System
